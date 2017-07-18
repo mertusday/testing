@@ -7,12 +7,14 @@ $PSVersionTable.PSVersion
 # install azure commandlets.
 install-module azurerm
 
+
+Import-Module -Name PowerShellGet
+
 #Save powershellget.
-Save-Module -Name PowerShellGet -Path C:\users\chaegley\desktop
+Save-Module -Name PowerShellGet -Path C:\Users\User\Desktop
 
 #install powershellget
-Install-Module -Name PowerShellGet -Force
-
+Install-Module -Name PowerShellGet -Force -AllowClobber
 
 Get-ExecutionPolicy
 
@@ -20,7 +22,7 @@ Set-ExecutionPolicy unrestricted
 
 
 
-Install-Module Azure
+install-Module -Name Azure -Force
 import-module Azure
 
 Add-AzureAccount
